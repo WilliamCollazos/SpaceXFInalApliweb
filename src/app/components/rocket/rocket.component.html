@@ -1,0 +1,20 @@
+<div class="mdl-card stock-card mdl-shadow--2dp prueba" [ngClass]="{increase:isPositive(), decrease:isNegative()}">
+    <div class="mdl-card__title">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <h2 class="text-light">{{rocket.name}}</h2>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h3>{{rocket.height}}</h3>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4>{{rocket.country}}</h4>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <img src="{{rocket.flickr_images[0]}}" width="250" alt="{{rocket.name}}"/>
+            </div>
+            <button type="button" class="text-center btn btn-secondary" (click)="update()">Actualizar </button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-dark" (click)="delete()">Eliminar</button>
+    </div>
+</div>

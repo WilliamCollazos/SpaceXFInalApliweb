@@ -1,0 +1,41 @@
+<form #form="ngForm" (ngSubmit)="save()">
+<div class="mdl-card stock-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Id" type="number" id="id" name="id" [(ngModel)]="rocket.id">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Rocket name" type="text" id="name" name="name" [(ngModel)]="rocket.name">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Description" type="text" id="description" name="description" [(ngModel)]="rocket.description">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Height" type="number" id="height" name="height" [(ngModel)]="rocket.height">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Country" type="text" id="country" name="country"  [(ngModel)]="rocket.country">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="Image" type="text" id="image" name="image" [(ngModel)]="rocket.flickr_images[0]">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <button class="mdl-button mdl-js-button mdl-button--raised" (click)="reload();save()" >Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
